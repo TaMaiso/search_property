@@ -2,6 +2,13 @@
 
 This is a microservice that allows all types of users to be consulted for properties information.
 
+## Brief
+
+- The statuses "pre_sale", "sale" and "sold" can be used to examine the attributes (properties with different states should never be visible to the user).
+- These properties can be filtered by year of construction, city, and state.
+- On the same query, users can apply numerous filters.
+- The following property information is available to users: Address, City, Status, Sale Price, and Description.
+
 ## Project Architecture
 
 It was used wsgiref (Utilities and Reference Implementation) for the implementation and docker for build the develop/deploy enviroment.
