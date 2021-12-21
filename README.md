@@ -2,6 +2,19 @@
 
 This is a microservice that allows all types of users to be consulted for properties information.
 
+## How develop
+
+```bash
+source env/bin/activate
+python main.py
+```
+
+## How test
+
+```bash
+python -m unittest discover
+```
+
 ## Brief
 
 - The statuses "pre_sale", "sale" and "sold" can be used to examine the attributes (properties with different states should never be visible to the user).

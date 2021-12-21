@@ -1,8 +1,8 @@
-from .base import Base
+from ..data import Handler
 
 class App: 
-    def __init__(self):
-        app = Base().get('/things', self.create_things)
+    def __init__(self, config):
+        app = Handler(config).get('/things', self.create_things)
         app.start()
 
     def create_things(self, request):

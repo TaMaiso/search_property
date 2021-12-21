@@ -1,7 +1,9 @@
 from src.deal import App
+from dotenv import dotenv_values
 
 if __name__ == "__main__":
     try:
-        App()
+        config = dotenv_values(".env")
+        App(config)
     except KeyboardInterrupt:
         print('Goodbye.')
