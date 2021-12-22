@@ -47,6 +47,12 @@ curl http://localhost:8088/property?year=2011&city=Bogota&price=3000000
 - On the same query, users can apply numerous filters.
 - The following property information is available to users: Address, City, Status, Sale Price, and Description.
 
+## Philosophy
+
+Python is not Java, nor is C#.
+Python has a better object implementation than javascript but shares functional programming flavors.
+This development uses the minimum amount of external dependencies.
+
 ## Project Architecture
 
 It was used wsgiref (Utilities and Reference Implementation) for the implementation and docker for build the develop/deploy enviroment.

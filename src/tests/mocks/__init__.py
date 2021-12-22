@@ -1,2 +1,3 @@
 from .mockMakeResponse import MockMakeResponse
 from .mockFindMethodAndHandler import MockFindMethodAndHandler
+from .mockGetParamsProperty import MockGetParamsProperty
