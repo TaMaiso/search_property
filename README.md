@@ -25,8 +25,8 @@ General response for all request:
 
 ```json
 {
-    "code": 200 || 201 || ...
-    "message": "faszdfsdf"
+    "code": 200 || ... || 501,
+    "message": "faszdfsdf",
     "data": { "with": "data" } || null,
     "status": "success" || "error" || "fail",
 }
@@ -59,7 +59,13 @@ The project is based on Domain Driven Design (DDD), but with a few exceptions.
 
 The information flow starts in the _data layer_ and continues via the _deal layer_, the _domain layer_ contains the application's core logic.
 
-## Microservices Pro
+## Like Microservices
+
+Entity Relationship Diagram.
 
 ![aaaaaaa drawio](https://user-images.githubusercontent.com/14327365/147158921-c4019a2f-531d-4df6-9493-5769715e164b.png)
 
+With an enumeration field with the type of relationship between the users and properties tables, you must construct a many-to-many relationship between them.
+The reason for this is to enable for the extension of the relationship type by including more types in the enumeration.
+
+The proposed extension of the database is in the migrations file
