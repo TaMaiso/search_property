@@ -40,7 +40,7 @@ After run for develop, write on project base root:
 curl http://localhost:8088/property?year=2011&city=Bogota&price=3000000
 ```
 
-## Brief
+## Current Project Brief
 
 - The statuses "pre_sale", "sale" and "sold" can be used to examine the attributes, properties with different states should never be visible to the user.
 - These properties can be filtered by year of construction, city, and state.
@@ -58,3 +58,8 @@ The project is based on Domain Driven Design (DDD), but with a few exceptions.
 - The _domain_ layer hasn't been renamed.
 
 The information flow starts in the _data layer_ and continues via the _deal layer_, the _domain layer_ contains the application's core logic.
+
+## Microservices Pro
+
+![aaaaaaa drawio](https://user-images.githubusercontent.com/14327365/147158921-c4019a2f-531d-4df6-9493-5769715e164b.png)
+
