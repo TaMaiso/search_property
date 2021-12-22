@@ -4,6 +4,6 @@ from dotenv import dotenv_values
 if __name__ == "__main__":
     try:
         config = dotenv_values(".env")
-        App(config)
+        App()
     except KeyboardInterrupt:
         print('Goodbye.')

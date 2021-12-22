@@ -2,22 +2,45 @@
 
 This is a microservice that allows all types of users to be consulted for properties information.
 
-## How develop
+## Develop it
+
+Write On project base root:
 
 ```bash
 source env/bin/activate
 python main.py
 ```
 
-## How test
+## Test it
+
+Write On project base root:
 
 ```bash
 python -m unittest discover
 ```
 
+## Consume it
+
+After run for develop, write on project base root:
+
+```bash
+curl localhost:8088/asdfa
+```
+
+General response for all request:
+
+```json
+{
+    "code": 200 || 201 || ...
+    "message": "faszdfsdf"
+    "data": { "with": "data" } || null,
+    "status": "success" || "error" || "fail",
+}
+```
+
 ## Brief
 
-- The statuses "pre_sale", "sale" and "sold" can be used to examine the attributes (properties with different states should never be visible to the user).
+- The statuses "pre_sale", "sale" and "sold" can be used to examine the attributes, properties with different states should never be visible to the user.
 - These properties can be filtered by year of construction, city, and state.
 - On the same query, users can apply numerous filters.
 - The following property information is available to users: Address, City, Status, Sale Price, and Description.
