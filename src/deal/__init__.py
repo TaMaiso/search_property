@@ -1,1 +1,1 @@
-from .controller import App
+from .controller import get_params_property

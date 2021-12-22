@@ -1,4 +1,4 @@
-from src.deal import App
+from src.data import App
 from dotenv import dotenv_values
 
 if __name__ == "__main__":
