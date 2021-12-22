@@ -12,6 +12,5 @@ class App:
         city = request['city'][0]
         price = request['price'][0]
         data = self.db.query(year, "'{}'".format(city), price)
-        print(data)
         return "200 OK", "asdfasdf", "asdfasdfddd", data
         
