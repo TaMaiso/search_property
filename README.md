@@ -21,12 +21,6 @@ python -m unittest discover
 
 ## Consume it
 
-After run for develop, write on project base root:
-
-```bash
-curl localhost:8088/asdfa
-```
-
 General response for all request:
 
 ```json
@@ -36,6 +30,14 @@ General response for all request:
     "data": { "with": "data" } || null,
     "status": "success" || "error" || "fail",
 }
+```
+
+## Use it
+
+After run for develop, write on project base root:
+
+```bash
+curl http://localhost:8088/property?year=2011&city=Bogota&price=3000000
 ```
 
 ## Brief
