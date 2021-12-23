@@ -1,6 +1,7 @@
 import pymysql
 import logging 
 from ..domain import Property
+from .constants import Status, Msgs, Codes
 
 class Database:
     def __init__(self, config):
@@ -43,10 +44,12 @@ class Database:
                     prop = Property(*aaa)
                     properties.append(prop.__dict__)
 
-            return properties
+            return Codes['OK'].value, Msgs['OK'].value, Status['SUCCESS'].value, properties
 
-        except pymysql.err.OperationalError as err:
+        except pymysql.err.OperationalError as err:           
             logging.error('Protocol problem:', 'connection reset', extra=err)
+            return Codes['SEVER_ERROR'].value, Msgs['PROBLEM_FOUND'].value, Status['ERROR'].value, None
+
 
         finally:
             cursor.close()

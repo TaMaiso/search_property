@@ -1,11 +1,12 @@
 import re
 import json
+import logging 
 from typing import List
 from urllib.parse import parse_qs
 from collections import defaultdict
 from collections.abc import Callable
 from wsgiref.simple_server import make_server
-from .constants import Env, Codes, Methods, Status
+from .constants import Env, Codes, Methods, Status, Msgs
 
 class Handler:
     handler_map = defaultdict(dict)
@@ -32,7 +33,7 @@ class Handler:
             if matched:
                 status, request_body  = request_body_map[method]()
                 return status, request_body, info[method]
-        return Codes['NOT_FOUND'].value, {}, lambda x: ['', 'error', Status['FAIL'].value, None]
+        return Codes['NOT_FOUND'].value, {}, lambda x: ['', Msgs['NOT_FOUND'].value, Status['FAIL'].value, None]
 
     def make_response(self, code: str, msg: str, status: str, data: dict) -> str:
         return json.dumps({
@@ -59,4 +60,5 @@ class Handler:
 
     def start(self) -> None:
         with make_server('localhost', 8088, self) as server:
+            logging.debug('Serve listen to 8088 port')
             server.serve_forever()
