@@ -11,7 +11,7 @@ class Database:
         self.password = config['PASSWORD']
         self.database = config['DATABASE']
 
-    def query(self,year, city, price):
+    def query(self, year, city, price):
         try: 
             connect = pymysql.Connect(
                 host=self.host,

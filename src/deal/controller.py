@@ -3,3 +3,4 @@ def get_params_property(request):
     city = request['city'][0]
     price = request['price'][0]
     return year, "'{}'".format(city), price
+

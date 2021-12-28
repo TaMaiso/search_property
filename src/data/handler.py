@@ -1,6 +1,5 @@
 import re
 import json
-import logging 
 from typing import List
 from urllib.parse import parse_qs
 from collections import defaultdict
@@ -60,5 +59,5 @@ class Handler:
 
     def start(self) -> None:
         with make_server('localhost', 8088, self) as server:
-            logging.debug('Serve listen to 8088 port')
+            print('Listening on port 8088')
             server.serve_forever()
