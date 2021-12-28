@@ -28,7 +28,7 @@ class Database:
                     INNER JOIN (
                         SELECT sh.property_id AS id, MAX(sh.update_date) AS date 
                         FROM habi_db.status_history AS sh 
-                        WHERE (sh.status_id = 3 OR sh.status_id = 4 OR sh.status_id = 5) 
+                        WHERE sh.status_id = 3 OR sh.status_id = 4 OR sh.status_id = 5
                         GROUP BY sh.property_id) 
                     AS sh ON (
                         sh.id = history.property_id and sh.date = history.update_date)

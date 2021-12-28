@@ -1,1 +1,1 @@
-from .entities import Property
+from .entities import Property, Restrictions
