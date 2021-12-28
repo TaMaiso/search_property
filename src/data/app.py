@@ -1,7 +1,7 @@
 from .handler import Handler
 from .database import  Database
-from ..deal import get_params_property
-
+from ..deal import Controller
+from ..deal import Repository
 class App: 
     def __init__(self, config):
         app = Handler()
@@ -10,7 +10,9 @@ class App:
         app.start()
     
     def get_properties(self, request):
-        params = get_params_property(request)
-        code, message, status, data = self.db.query(*params)
+        params = Controller(request).get_params()
+        print(request, params)
+        statement = Repository(*params).get_query()
+        code, message, status, data = self.db.query(statement)
         return code, message, status, data
         

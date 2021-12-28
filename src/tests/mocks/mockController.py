@@ -1,4 +1,5 @@
-class Controller:
+
+class MockController:
     def __init__(self, request) -> None:
         self.year = request.get("year", [""])[0]
         self.city = request.get('city', [""])[0]
@@ -6,4 +7,3 @@ class Controller:
 
     def get_params(self):
         return self.year, self.city, self.price
-

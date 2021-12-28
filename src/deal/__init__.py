@@ -1,2 +1,2 @@
-from .controller import get_params_property
+from .controller import Controller
 from .repository import Repository

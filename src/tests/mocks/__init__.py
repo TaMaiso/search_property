@@ -1,5 +1,5 @@
 from .mockMakeResponse import MockMakeResponse
 from .mockFindMethodAndHandler import MockFindMethodAndHandler
-from .mockGetParamsProperty import MockGetParamsProperty
-from .mockGetFilters import MockGetFilters
+from .mockController import MockController
+from .mockRepository import MockRepository
 from .mockGetFilter import MockGetFilter
