@@ -1,54 +1,13 @@
 import unittest
-from .mocks import MockRepository
 from ..deal import Repository
 
-class TestHandler(unittest.TestCase):
+class TestRepository(unittest.TestCase):
     def setUp(self):
         self.year = "2201"
         self.price = "300000000"
         self.city = "bogota"
         self.maxDiff = None
-
-    def test_get_filters_by_nothing(self):
-        expected = MockRepository().get_filters()
-        response = Repository().get_filters()
-        self.assertEqual(response, expected)
-
-    def test_get_filters_by_year(self):
-        expected = MockRepository(self.year).get_filters()
-        response = Repository(self.year).get_filters()
-        self.assertEqual(response, expected)
-
-    def test_get_filters_by_price(self):
-        expected = MockRepository(self.price).get_filters()
-        response = Repository(self.price).get_filters()
-        self.assertEqual(response, expected)
-
-    def test_get_filters_by_city(self):
-        expected = MockRepository(self.city).get_filters()
-        response = Repository(self.city).get_filters()
-        self.assertEqual(response, expected)
-
-    def test_get_filters_by_year_city(self):
-        expected = MockRepository(self.year, self.city).get_filters()
-        response = Repository(self.year, self.city).get_filters()
-        self.assertEqual(response, expected)
-
-    def test_get_filters_by_year_price(self):
-        expected = MockRepository(year=self.year, price=self.price).get_filters()
-        response = Repository(year=self.year, price=self.price).get_filters()
-        self.assertEqual(response, expected)
-
-    def test_get_filters_by_city_price(self):
-        expected = MockRepository(city=self.city, price=self.price).get_filters()
-        response = Repository(city=self.city, price=self.price).get_filters()
-        self.assertEqual(response, expected)
-
-    def test_get_filters_by_year_city_price(self):
-        expected = MockRepository(self.year, self.city, self.price).get_filters()
-        response = Repository(self.year, self.city, self.price).get_filters()
-        self.assertEqual(response, expected)
-    
+  
     def test_get_query(self):
         expected = """\
             SELECT property.id, property.address, property.city, property.price, property.description, status.name AS status\

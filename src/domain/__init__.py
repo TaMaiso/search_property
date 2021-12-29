@@ -1,1 +1,1 @@
-from .entities import Property, Restrictions
+from .entities import Property, PropRestrictions, PropFilters

@@ -63,6 +63,3 @@ class TestHandler(unittest.TestCase):
         mock_response = mock_make_response.get_response()
         response  = self.app.make_response(code, msg, status, data)
         self.assertEqual(response, mock_response)
-
-if __name__=='__main__':
-    unittest.main()

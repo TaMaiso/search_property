@@ -1,4 +1,4 @@
-class MockRepository:
+class MockEntities:
     def __init__(self, year: str="", city: str="", price: str="") -> None:
         self.year = year
         self.city = city
@@ -39,3 +39,6 @@ class MockRepository:
             self.city,
             self.price
         )
+
+    def get_restrictions(self):
+        return "WHERE sh.status_id = 3 OR sh.status_id = 4 OR sh.status_id = 5"

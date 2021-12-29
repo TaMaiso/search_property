@@ -2,7 +2,7 @@ import unittest
 from .mocks import MockController
 from ..deal import Controller
 
-class TestHandler(unittest.TestCase):
+class TestController(unittest.TestCase):
     def setUp(self):
         self.resolve = {'year': ['2011'], 'city': ['Bogota'], 'price': ['3000000']}
 
