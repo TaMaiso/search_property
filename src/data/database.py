@@ -1,7 +1,7 @@
 import pymysql
 import logging 
 from ..domain import Property
-from .constants import Status, Msgs, Codes
+from .valueObjects import Status, Msgs, Codes
 
 class Database:
     def __init__(self, config):

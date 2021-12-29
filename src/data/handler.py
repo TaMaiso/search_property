@@ -5,7 +5,7 @@ from urllib.parse import parse_qs
 from collections import defaultdict
 from collections.abc import Callable
 from wsgiref.simple_server import make_server
-from .constants import Env, Codes, Methods, Status, Msgs
+from .valueObjects import Env, Codes, Methods, Status, Msgs
 
 class Handler:
     handler_map = defaultdict(dict)
